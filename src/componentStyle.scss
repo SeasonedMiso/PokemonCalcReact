@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.calc {
+  display: flex;
+
+  &__label {
+    height: 24px;
+    width: 23px;
+    font-size: 10px;
+    line-height: 10px;
+    &__stab {
+      margin: 46.5%;
+    }
+  }
+  &__input {
+    box-shadow: 4px 3px rgb(157, 199, 199);
+    box-sizing: border-box;
+    height: 39px;
+    width: 426px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    &__check {
+      box-sizing: border-box;
+      height: 39px;
+      width: 100%;
+    }
+    &__out {
+      box-shadow: 4px 3px rgb(157, 199, 199);
+      font-size: 16px;
+      text-align: center;
+      box-sizing: border-box;
+      height: 39px;
+      width: 385px;
+      border: 1px solid #e6e6e6;
+      border-radius: 1px 10px 10px 1px;
+    }
+  }
+  &__btn {
+    box-shadow: 4px 3px rgb(157, 199, 199);
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 39px;
+    width: 42px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px 1px 1px 10px;
+  }
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

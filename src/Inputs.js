@@ -1,9 +1,11 @@
 //implment atk stages, accuracy stages
 
 import React from "react";
+import "./componentStyle.scss";
 class Inputs extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       Lvl: 50,
       パワー: 50,
@@ -71,11 +73,13 @@ class Inputs extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="calc">
         <form>
-          <label>
-            Lvl
+          <label className="calc__label">
+            Lvl レベル 
+            <br />
             <input
+              className="calc__input"
               name="Lvl"
               type="number"
               value={this.state.Lvl}
@@ -83,9 +87,11 @@ class Inputs extends React.Component {
             />
           </label>
           <br />
-          <label>
-            パワー
+          <label className="calc__label">
+            PWR パワー
+            <br />
             <input
+              className="calc__input"
               name="パワー"
               type="number"
               value={this.state.パワー}
@@ -93,9 +99,10 @@ class Inputs extends React.Component {
             />
           </label>
           <br />
-          <label>
-            攻
+          <label className="calc__label">
+            ATK 攻<br />
             <input
+              className="calc__input"
               name="攻"
               type="number"
               value={this.state.攻}
@@ -103,9 +110,11 @@ class Inputs extends React.Component {
             />
           </label>
           <br />
-          <label>
-            防(敵)
+          <label className="calc__label">
+            DEF 防(敵)
+            <br />
             <input
+              className="calc__input"
               name="防"
               type="number"
               value={this.state.防}
@@ -124,15 +133,22 @@ class Inputs extends React.Component {
               <option value="4x">4x</option>
             </select>
           </label> */}
-          STAB
-          <input
-            name="STAB"
-            type="checkbox"
-            checked={this.state.STAB}
-            onChange={this.handleInputChange}
-          />
+
+          <label className="calc__label__stab">
+            STAB
+            <br />
+            <input
+              className="calc__input__check"
+              name="STAB"
+              type="checkbox"
+              checked={this.state.STAB}
+              onChange={this.handleInputChange}
+            />
+          </label>
+
           <br />
           <button
+            className="calc__btn"
             type="simpleQuery"
             onClick={(e) => {
               this.calc(e);
@@ -140,7 +156,11 @@ class Inputs extends React.Component {
           >
             Calc
           </button>
-          <input type="text" className="outStyle" value={this.state.damage} />
+          <input
+            type="text"
+            className="calc__input__out"
+            value={this.state.damage}
+          />
         </form>
       </div>
     );
